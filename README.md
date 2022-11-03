@@ -257,7 +257,7 @@ The most relevant arguments are the following:
     Useful for testing launch files, descriptions, etc. See explanation below.
   - `initial_positions` (default: dictionary with all joint values set to 0) - Allows passing a dictionary to set the initial joint values for the fake hardware from [ros2_control](http://control.ros.org/).  It can also be set from a yaml file with the `load_yaml` commands as follows:
       ```
-      <xacro:property name="initial_positions" value="${load_yaml(initial_positions_file)}"/>
+      <xacro:property name="initial_positions" value="${xacro.load_yaml(initial_positions_file)}"/>
       ```
       In this example, the **initial_positions_file** is a xacro argument that contains the absolute path to a yaml file. An example of the initial positions yaml file is as follows:
       ```
